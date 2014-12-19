@@ -1,15 +1,32 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This function can transform a matrix as quickly as possible.
 
-## Write a short comment describing this function
+## It is short and fast.
 
 makeCacheMatrix <- function(x = matrix()) {
+       m= NULL
+       set<function<-(y){
+         x<<-y
+         m<<-NULL
+     
+       args(solveCrossprod)
+       function (X, method = c("qr", "chol", "solve"))
+         A=matrix()
+       solveCrossprod(A,method="qr")
+       list(matrix=matrix)
 
 }
 
 
-## Write a short comment describing this function
+## This function can check the result of the transformation.
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(x, ...) { m <- x$matrix()
+        if(!is.null(m)) {
+                message("getting ")
+                return(m)
+        }
+        data <- x$solve()
+        m <- solve(matrix, ...)
+        x$solvematrix(m)
+        m
         ## Return a matrix that is the inverse of 'x'
 }
